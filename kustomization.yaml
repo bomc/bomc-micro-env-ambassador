@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  app.kubernetes.io/name: bomc-ambassador
+  
+resources:
+- 010-ambassador-namespace.yaml
+- 020-ambassador-crds.yaml
+- 030-ambassador-rbac.yaml
+- 040-ambassador-loadbalancer-svc.yaml
